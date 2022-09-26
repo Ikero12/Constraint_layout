@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Constraint_layout</string>
+    <string name="button">Button</string>
 </resources>
