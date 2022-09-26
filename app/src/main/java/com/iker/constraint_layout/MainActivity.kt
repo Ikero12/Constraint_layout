@@ -6,15 +6,15 @@ import android.transition.TransitionManager
 import androidx.constraintlayout.widget.ConstraintSet
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        constraintLayout = findViewById(R.id.constraint_layout)
+        setContentView(R.layout.keyframe1)
+        constraintLayout = findViewById(R.id.constraint_layout) // member variable
     }
 
-    override fun animateToKeyframeTwo() {
+    fun animateToKeyframeTwo() {
         val constraintSet = ConstraintSet()
-        constraintSet.load(this, R.layout.layout)
+        constraintSet.load(this, R.layout.keyframe2)
         TransitionManager.beginDelayedTransition()
         constraintSet.applyTo(constraintLayout)
     }
